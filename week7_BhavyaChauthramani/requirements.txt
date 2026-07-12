@@ -1,0 +1,13 @@
+numpy
+scikit-learn
+pypdf
+
+# Optional (recommended) - semantic embeddings instead of the TF-IDF fallback
+sentence-transformers
+
+# Optional - only needed for the "local" generation backend
+transformers
+torch
+
+# Optional - only needed for the "anthropic" generation backend
+anthropic

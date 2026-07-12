@@ -1,0 +1,27 @@
+Retrieval-Augmented Generation (RAG) is an approach in natural language processing that
+combines information retrieval with text generation. Instead of relying only on knowledge
+memorized during training, a RAG system first retrieves relevant passages from an external
+document collection and then uses a language model to generate an answer grounded in that
+retrieved content.
+
+The main idea of RAG is to reduce hallucination and allow question answering over private
+or domain-specific data that the language model was never trained on. This makes RAG
+especially useful for chatbots, enterprise search, and knowledge assistants that need to
+answer questions about internal company documents, research papers, or personal notes.
+
+A typical RAG pipeline has four core stages. First, document ingestion loads raw text from
+sources such as PDFs or text files. Second, text chunking splits long documents into smaller,
+overlapping passages so that retrieval can be precise. Third, an embedding model converts
+each chunk into a vector that captures its semantic meaning. Fourth, these vectors are stored
+in a vector database that supports fast similarity search.
+
+At query time, the user's question is converted into an embedding using the same model, and
+the vector database returns the most similar chunks. These chunks are inserted into the
+language model's prompt as context, and the model generates a final answer using only that
+context. This is why RAG answers are described as "grounded" - they are backed by retrieved
+evidence rather than pure memorization.
+
+Common improvements to a basic RAG system include hybrid search that combines keyword
+matching with vector similarity, re-ranking retrieved chunks with a cross-encoder for better
+relevance, and experimenting with different embedding models or chunk sizes to improve
+retrieval accuracy.
