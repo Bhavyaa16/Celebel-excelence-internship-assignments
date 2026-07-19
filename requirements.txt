@@ -1,8 +1,0 @@
-pandas
-numpy
-scikit-learn
-tensorflow
-streamlit
-plotly
-groq
-python-dotenv
